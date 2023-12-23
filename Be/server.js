@@ -6,7 +6,7 @@ const app = express();
 
 const PORT = 5000;
 app.use(express.json());
-app.use(cors({ origin: "https://pricecheckerrr.onrender.com/aw/productpage" }));
+app.use(cors({ origin: "*" }));
 
 // Launch a headless browser.
 
