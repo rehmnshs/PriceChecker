@@ -4,11 +4,15 @@ const cors = require('cors');
 const app = express();
 
 
-const PORT = 6000;
+const PORT = 5000;
 app.use(express.json());
 app.use(cors({ origin: "*" }));
-
-
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'https://pricecheckerrr.onrender.com');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
 
 
   // Launch a headless browser.

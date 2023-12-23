@@ -11,7 +11,7 @@ export default function Productpage() {
   const funcdo = async () => {
     console.log(term);
     const  respp = await axios.get(
-          "https://pricecheckerbe.onrender.com/getall",
+      "https://pricecheckerbe.onrender.com/getall",
           {
             params: { term:term },
           }
