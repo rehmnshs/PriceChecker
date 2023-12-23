@@ -29,18 +29,15 @@ let browser = null;
     
     try{
       // browser = await puppeteer.launch();
-      const [ am,amm, flip] = await Promise.all([
+      const [ am] = await Promise.all([
         amazonsearch(st),
-        flipkartsearch(st),
-        cromasearch(st)
-     
+
       ]);
     
     // Assuming you want to send the results as JSON to the front end
       res.json({
        amazon: am,
-       flipkart:amm,
-      reliance:flip
+
 
       });
       await browser.close();
