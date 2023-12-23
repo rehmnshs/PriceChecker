@@ -49,7 +49,7 @@ export default function Navbar() {
         </div>
         <div className="img1">
           <section>
-           <Carousell />
+
           </section>
           
         </div>
