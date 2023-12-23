@@ -6,7 +6,8 @@ const app = express();
 
 const PORT = 6000;
 app.use(express.json());
-app.use(cors({ origin: "https://pricecheckerbe.onrender.com" }));
+app.use(cors({ origin: "*" }));
+
 
 
 
