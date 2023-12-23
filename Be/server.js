@@ -3,7 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-require("dotenv").config();
+
 const PORT = 5000;
 app.use(express.json());
 app.use(cors({ origin: "https://pricecheckerrr.onrender.com/aw/productpage" }));
@@ -19,7 +19,7 @@ let browser = null;
 app.get("/getall", async (req, res) => {
   browser = await puppeteer.launch({
     args: ["--disable-setuid-sandbox","---no-sandbox"],
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH,
+    executablePath: '/usr/bin/google-chrome-stable',
   });
 
   const st = req.query.term;
